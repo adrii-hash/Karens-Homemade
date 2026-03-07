@@ -108,44 +108,22 @@
 		ul li strong {
 			color: #a200ff;
 		}
-		form { 
-			max-width: 650px;
-			margin: 25px auto;
+		.contact-section {
+			text-align: center;
+			padding: 40px;
 		}
-		form label {
-			display: block;
-			margin-bottom: 8px;
-			font-weight: 500;
-		}
-		form input, 
-		form textarea,
-		form button { 
-			width: 100%
-			padding: 14px;
-			margin-bottom: 18px;
-			border: 1px solid #ddd;
-			border-radius: 8px;
-			font-size: 1rem;
-		}
-		form input:focus, 
-		form textarea:focus {
-			border-color: #a200ff;
-			outline: none;
-		}
-		form button {
-			background-color: #a200ff;
-			color: white;
-			font-size: 1.1rem;
-			font-weight: 500;
+		iframe {
+			width: 100%;
 			border: none;
-			cursor: pointer;
-			transition: background-color 0.3s ease;
 		}
-		form button:hover {
-			background-color: #8300b3;
-		}
-		form button:active {
-			background-color: #6a0085;
+		form { 
+			padding: 25px;
+			max-width: 900px;
+			margin: 20px auto;
+			background-color: #ffffff;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			transition: box-shadow 0.3s ease;
 		}
 	</style>
 </head>
@@ -208,17 +186,20 @@
 			<li><strong><a href="638857501_25960027603665736_1052461800805666931_n.jpg" target="_blank"> Theodoreo V. Zabala,</a></strong> Ambassador</li>
 		</ul>
 	</section>
-	<section id="contact">
-		<h2>Contact Us!</h2>
-		<form>
-			<label for="name">Name:</label><br>
-			<input type="text" id="name" name="name"><br><br>
-			<label for="email">Email:</label><br>
-			<input type="email" id="email" name="email"><br><br>
-			<label for="message">Message:</label><br>
-			<textarea id="message" name="message" rows="4"></textarea><br><br>
-			<button type="submit">Send</button>
-		</form>
-	</section>
+	<section>
+	<div class="form">
+		<div class="contact-section">
+			<h2>Contact Us!</h2>
+			<p>Send us feedback or questions through the form below.</p>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSembLUtvvn3sdOE4DzIF4b5FTj5xOtXgZ3WMWelRqbF86rcpw/viewform?embedded=true" 
+				width="640" 
+				height="650" 
+				frameborder="0" 
+				marginheight="0" 
+				marginwidth="0">
+				Loading…
+				</iframe>
+		</div>
+	</div>
 </body>
 </html>

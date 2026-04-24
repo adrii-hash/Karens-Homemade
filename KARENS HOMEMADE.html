@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karen's Homemade</title>
 	<style>
 		body {
@@ -27,6 +28,13 @@
 			position: absolute;
 			top: 10px;
 			left: 75px;
+		}
+		.prd {
+			width: 150px;
+			height: 150px;
+			border-radius: 10px;
+			display: block;
+			margin-left: 75px;
 		}
 		.heh {
 			width: 150px;
@@ -80,9 +88,9 @@
 		}
 		table {
 			width: 100%;
-			border-collapse: collapse;
+			border-collapse: separate;
 			margin-top: 15px;
-		{
+		}
 		table th, 
 		table td {
 			border: 1px solid #ddd;
@@ -108,57 +116,34 @@
 		ul li strong {
 			color: #a200ff;
 		}
-		form { 
-			max-width: 650px;
-			margin: 25px auto;
+		.contact-section {
+			text-align: center;
+			padding: 40px;
 		}
-		form label {
-			display: block;
-			margin-bottom: 8px;
-			font-weight: 500;
-		}
-		form input, 
-		form textarea,
-		form button { 
-			width: 100%
-			padding: 14px;
-			margin-bottom: 18px;
-			border: 1px solid #ddd;
-			border-radius: 8px;
-			font-size: 1rem;
-		}
-		form input:focus, 
-		form textarea:focus {
-			border-color: #a200ff;
-			outline: none;
-		}
-		form button {
-			background-color: #a200ff;
-			color: white;
-			font-size: 1.1rem;
-			font-weight: 500;
+		iframe {
+			width: 100%;
 			border: none;
-			cursor: pointer;
-			transition: background-color 0.3s ease;
 		}
-		form button:hover {
-			background-color: #8300b3;
-		}
-		form button:active {
-			background-color: #6a0085;
+		form { 
+			padding: 25px;
+			max-width: 900px;
+			margin: 20px auto;
+			background-color: #ffffff;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			transition: box-shadow 0.3s ease;
 		}
 	</style>
 </head>
 <body>
 	<header class="header">
-		<img class="me" src="WIN_20260307_17_33_30_Pro.jpg" alt="HAA WALANG NET">
 		<img class="heh" src="Karens homemade.png" alt="hi">
 		<h1>Welcome to Karen's Homemade Products!</h1>
 		<p>yeeeeeee</p>
 	</header>
 	<nav>
 		<a href="#about">About</a> |
-		<a href="#table">Test</a> |
+		<a href="#table">Table</a> |
 		<a href="#management">Management</a> |
 		<a href="#contact">Contact</a> 
 	</nav>
@@ -179,19 +164,47 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>uno</td>
-					<td>dos</td>
-					<td>tres</td>
+					<th><img class="prd" src="prd3.jpg" alt="oops"></th>
+					<th><img class="prd" src="prd2.jpg" alt="oops"></th>
+					<th><img class="prd" src="prd1.jpg" alt="oops"></th>
 				</tr>
 				<tr>
-					<td>one</td>
-					<td>two</td>
-					<td>three</td>
-				</tr>
-				<tr>
-					<td>ichi</td>
-					<td>nii</td>
-					<td>san</td>
+					<th>
+					📌 Puto: <br>
+					✔️Cheese/salted-egg<br>
+					BITE/SMALL SIZE:<br>
+					50pcs = 200php<br>
+					75pcs = 300php<br>
+					100pcs = 400php<br>
+					150pcs = 600php<br>
+					<br>
+					MEDIUM SIZE:<br>
+					✔️cheese or salted-egg:<br>
+					50pcs = 300php<br>
+					75pcs = 450php<br>
+					100pcs = 600php<br>
+					150pcs = 900php<br>
+					</th>
+					<th>
+					📌 Puto pao <br>
+					(pork asado filling with<br>
+					salted egg and<br>
+					cheese toppings):<br>
+					✔️12pcs = 180php<br>
+					✔️24pcs = 360php<br>
+					✔️50pcs = 720php<br>
+					</th>
+					<th>
+					📌 Puto flan:<br>
+					MEDIUM SIZE:<br>
+					✔️30pcs = 300php<br>
+					✔️40pcs = 400php<br>
+					✔️50pcs = 500php<br>
+					LARGE SIZE:<br>
+					✔️12pcs = 150php<br>
+					✔️24pcs = 300php<br>
+					✔️50pcs = 625php<br>
+					</th>
 				</tr>
 			</tbody>
 		</table>
@@ -209,16 +222,21 @@
 		</ul>
 	</section>
 	<section id="contact">
-		<h2>Contact Us!</h2>
-		<form>
-			<label for="name">Name:</label><br>
-			<input type="text" id="name" name="name"><br><br>
-			<label for="email">Email:</label><br>
-			<input type="email" id="email" name="email"><br><br>
-			<label for="message">Message:</label><br>
-			<textarea id="message" name="message" rows="4"></textarea><br><br>
-			<button type="submit">Send</button>
-		</form>
+	<div class="form">
+		<div class="contact-section">
+			<h2>Contact Us!</h2>
+			<p>Send us feedback or questions through the form below.</p>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSembLUtvvn3sdOE4DzIF4b5FTj5xOtXgZ3WMWelRqbF86rcpw/viewform?embedded=true" 
+				width="640" 
+				height="650" 
+				frameborder="0" 
+				marginheight="0" 
+				marginwidth="0">
+				Loading…
+				</iframe>
+		</div>
+	</div>
 	</section>
+
 </body>
 </html>

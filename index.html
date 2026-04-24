@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karen's Homemade</title>
 	<style>
 		body {
@@ -27,6 +28,13 @@
 			position: absolute;
 			top: 10px;
 			left: 75px;
+		}
+		.prd {
+			width: 150px;
+			height: 150px;
+			border-radius: 10px;
+			display: block;
+			margin-left: 75px;
 		}
 		.heh {
 			width: 150px;
@@ -80,9 +88,9 @@
 		}
 		table {
 			width: 100%;
-			border-collapse: collapse;
+			border-collapse: separate;
 			margin-top: 15px;
-		{
+		}
 		table th, 
 		table td {
 			border: 1px solid #ddd;
@@ -129,14 +137,13 @@
 </head>
 <body>
 	<header class="header">
-		<img class="me" src="WIN_20260307_17_33_30_Pro.jpg" alt="HAA WALANG NET">
 		<img class="heh" src="Karens homemade.png" alt="hi">
 		<h1>Welcome to Karen's Homemade Products!</h1>
 		<p>yeeeeeee</p>
 	</header>
 	<nav>
 		<a href="#about">About</a> |
-		<a href="#table">Test</a> |
+		<a href="#table">Table</a> |
 		<a href="#management">Management</a> |
 		<a href="#contact">Contact</a> 
 	</nav>
@@ -157,19 +164,47 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>uno</td>
-					<td>dos</td>
-					<td>tres</td>
+					<th><img class="prd" src="prd3.jpg" alt="oops"></th>
+					<th><img class="prd" src="prd2.jpg" alt="oops"></th>
+					<th><img class="prd" src="prd1.jpg" alt="oops"></th>
 				</tr>
 				<tr>
-					<td>one</td>
-					<td>two</td>
-					<td>three</td>
-				</tr>
-				<tr>
-					<td>ichi</td>
-					<td>nii</td>
-					<td>san</td>
+					<th>
+					📌 Puto: <br>
+					✔️Cheese/salted-egg<br>
+					BITE/SMALL SIZE:<br>
+					50pcs = 200php<br>
+					75pcs = 300php<br>
+					100pcs = 400php<br>
+					150pcs = 600php<br>
+					<br>
+					MEDIUM SIZE:<br>
+					✔️cheese or salted-egg:<br>
+					50pcs = 300php<br>
+					75pcs = 450php<br>
+					100pcs = 600php<br>
+					150pcs = 900php<br>
+					</th>
+					<th>
+					📌 Puto pao <br>
+					(pork asado filling with<br>
+					salted egg and<br>
+					cheese toppings):<br>
+					✔️12pcs = 180php<br>
+					✔️24pcs = 360php<br>
+					✔️50pcs = 720php<br>
+					</th>
+					<th>
+					📌 Puto flan:<br>
+					MEDIUM SIZE:<br>
+					✔️30pcs = 300php<br>
+					✔️40pcs = 400php<br>
+					✔️50pcs = 500php<br>
+					LARGE SIZE:<br>
+					✔️12pcs = 150php<br>
+					✔️24pcs = 300php<br>
+					✔️50pcs = 625php<br>
+					</th>
 				</tr>
 			</tbody>
 		</table>
@@ -186,7 +221,7 @@
 			<li><strong><a href="638857501_25960027603665736_1052461800805666931_n.jpg" target="_blank"> Theodoreo V. Zabala,</a></strong> Ambassador</li>
 		</ul>
 	</section>
-	<section>
+	<section id="contact">
 	<div class="form">
 		<div class="contact-section">
 			<h2>Contact Us!</h2>
@@ -201,5 +236,7 @@
 				</iframe>
 		</div>
 	</div>
+	</section>
+
 </body>
 </html>

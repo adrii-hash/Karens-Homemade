@@ -1,291 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karen's Homemade</title>
 	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
 		body {
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			line-height: 1.6;
-			margin: 0;
- 			padding: 0;
 			background-color: #ffd4fe;
 			color: #444;
 		}
+
 		.header {
 			background-color: #af4ca7;
 			color: white;
-			padding: 25px 0;
+			padding: 25px 20px;
 			text-align: center;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			position: relative;
 		}
-		.me {
-			width: 150px;
-			height: 150px;
-			border-radius: 10px;
-			display: block;
-			margin-left: 100px;
-			position: absolute;
-			top: 10px;
-			left: 75px;
-		}
-		.prd {
-			width: 150px;
-			height: 150px;
-			border-radius: 10px;
-			display: block;
-			margin-left: 75px;
-		}
+
 		.heh {
-			width: 150px;
-			height: 150px;
+			width: 120px;
+			height: 120px;
 			border-radius: 10px;
-			display: block;
-			margin-left: 100px;
-			position: absolute;
-			top: 10px;
-			right: 150px;
+			margin: 0 auto 15px;
+			display: none;
 		}
-		header h1{
+
+		header h1 {
 			margin: 0;
-			font-size: 2.5rem;
+			font-size: 2rem;
+			word-wrap: break-word;
 		}
+
+		header p {
+			margin: 10px 0 0 0;
+			font-size: 1rem;
+		}
+
 		nav {
 			background-color: #343a40;
-			text-align:center;
-			padding: 12px 0;
+			text-align: center;
+			padding: 12px 10px;
 			position: sticky;
 			top: 0;
+			z-index: 100;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
 		}
+
 		nav a {
 			color: #ffffff;
 			text-decoration: none;
-			margin: 0 20px;
 			font-weight: 500;
-			font-size: 1.1rem;
-			letter-spacing: 0.5px;
+			font-size: 0.9rem;
+			white-space: nowrap;
 		}
+
 		nav a:hover {
 			color: #9c799a;
 			text-decoration: underline;
 		}
+
 		section {
-			padding: 25px;
-			margin: 20px auto;
-			max-width: 900px;
+			padding: 20px 15px;
+			margin: 15px auto;
+			max-width: 100%;
 			background-color: #ffffff;
 			border-radius: 8px;
 			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 			transition: box-shadow 0.3s ease;
 		}
+
 		section:hover {
-		box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 		}
+
 		section h2 {
 			color: #af4ca7;
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 			margin-bottom: 15px;
 		}
+
 		table {
 			width: 100%;
-			border-collapse: separate;
+			border-collapse: collapse;
 			margin-top: 15px;
+			font-size: 0.9rem;
 		}
+
 		table th, 
 		table td {
 			border: 1px solid #ddd;
-			padding: 12px;
-			text-align: middle;
+			padding: 10px;
+			text-align: center;
 		}
+
 		table th {
 			background-color: #f1f1f1;
 			font-weight: 500;
 			color: #444;
 		}
+
 		table tr:nth-child(even) {
 			background-color: #f9f9f9;
 		}
+
+		.prd {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+
 		ul {
 			list-style: none;
 			padding: 0;
 		}
+
 		ul li {
-			margin: 12px 0;
-			font-size: 1.2rem;
+			margin: 10px 0;
+			font-size: 1rem;
+			word-wrap: break-word;
 		}
+
 		ul li strong {
 			color: #a200ff;
 		}
+
+		ul li a {
+			color: #0066cc;
+			text-decoration: none;
+		}
+
+		ul li a:hover {
+			text-decoration: underline;
+		}
+
 		.contact-section {
 			text-align: center;
-			padding: 40px;
+			padding: 20px 10px;
 		}
+
 		iframe {
 			width: 100%;
 			border: none;
-		}
-		form { 
-			padding: 25px;
-			max-width: 900px;
-			margin: 20px auto;
-			background-color: #ffffff;
-			border-radius: 8px;
-			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			transition: box-shadow 0.3s ease;
+			height: 500px;
 		}
 
-		/* ===== MOBILE RESPONSIVE STYLES (Small Phones: 0px - 480px) ===== */
+		/* MOBILE STYLES (0px - 480px) */
 		@media (max-width: 480px) {
+			.header {
+				padding: 15px 10px;
+			}
+
+			header h1 {
+				font-size: 1.5rem;
+			}
+
+			header p {
+				font-size: 0.9rem;
+			}
+
+			nav {
+				gap: 5px;
+				padding: 10px 5px;
+			}
+
+			nav a {
+				font-size: 0.75rem;
+			}
+
+			section {
+				padding: 15px 10px;
+				margin: 10px 5px;
+			}
+
+			section h2 {
+				font-size: 1.1rem;
+			}
+
+			table {
+				font-size: 0.75rem;
+			}
+
+			table th, 
+			table td {
+				padding: 6px 4px;
+			}
+
+			.prd {
+				width: 70px;
+				height: 70px;
+			}
+
+			ul li {
+				font-size: 0.9rem;
+			}
+
+			iframe {
+				height: 400px;
+			}
+		}
+
+		/* TABLET STYLES (481px - 1024px) */
+		@media (min-width: 481px) and (max-width: 1024px) {
+			.header {
+				padding: 20px 15px;
+			}
+
 			header h1 {
 				font-size: 1.8rem;
 			}
 
-			.me, .heh {
-				width: 100px;
-				height: 100px;
-				position: static;
-				display: none;
-				margin-left: 0;
+			header p {
+				font-size: 1rem;
 			}
 
-			nav {
-				padding: 8px 0;
+			.heh {
+				display: none;
 			}
 
 			nav a {
-				display: block;
-				margin: 8px 0;
+				font-size: 0.95rem;
+				margin: 0 5px;
+			}
+
+			section {
+				padding: 18px 12px;
+				margin: 12px auto;
+				max-width: 95%;
+			}
+
+			section h2 {
+				font-size: 1.2rem;
+			}
+
+			table {
 				font-size: 0.9rem;
 			}
 
-			section {
-				padding: 15px;
-				margin: 10px auto;
-				max-width: 100%;
-			}
-
-			section h2 {
-				font-size: 1.3rem;
-			}
-
-			table th, 
-			table td {
-				padding: 8px;
-				font-size: 0.85rem;
-			}
-
 			.prd {
-				width: 100px;
-				height: 100px;
-				margin-left: 0;
+				width: 90px;
+				height: 90px;
 			}
 
 			ul li {
 				font-size: 1rem;
 			}
 
-			.contact-section {
-				padding: 20px;
-			}
-
 			iframe {
-				height: 500px;
-			}
-
-			form {
-				padding: 15px;
-				max-width: 100%;
+				height: 550px;
 			}
 		}
 
-		/* ===== TABLET RESPONSIVE STYLES (481px - 1024px) ===== */
-		@media (min-width: 481px) and (max-width: 1024px) {
+		/* DESKTOP STYLES (1025px+) */
+		@media (min-width: 1025px) {
+			.header {
+				padding: 25px 20px;
+			}
+
 			header h1 {
-				font-size: 2rem;
+				font-size: 2.5rem;
 			}
 
-			.me, .heh {
-				width: 120px;
-				height: 120px;
-				position: static;
-				display: none;
-				margin-left: 0;
-			}
-
-			nav {
-				padding: 10px 0;
+			.heh {
+				display: block;
+				width: 150px;
+				height: 150px;
 			}
 
 			nav a {
-				margin: 0 10px;
-				font-size: 1rem;
+				margin: 0 20px;
+				font-size: 1.1rem;
 			}
 
 			section {
-				padding: 20px;
-				margin: 15px auto;
-				max-width: 95%;
+				padding: 25px;
+				margin: 20px auto;
+				max-width: 900px;
 			}
 
 			section h2 {
-				font-size: 1.4rem;
+				font-size: 1.5rem;
+			}
+
+			table {
+				font-size: 1rem;
 			}
 
 			table th, 
 			table td {
-				padding: 10px;
-				font-size: 0.95rem;
+				padding: 12px;
 			}
 
 			.prd {
-				width: 120px;
-				height: 120px;
-				margin-left: 0;
+				width: 150px;
+				height: 150px;
 			}
 
 			ul li {
-				font-size: 1.1rem;
-			}
-
-			.contact-section {
-				padding: 30px;
+				font-size: 1.2rem;
 			}
 
 			iframe {
-				height: 600px;
-			}
-
-			form {
-				padding: 20px;
-				max-width: 95%;
-			}
-		}
-
-		/* ===== DESKTOP RESPONSIVE STYLES (1025px and above) ===== */
-		@media (min-width: 1025px) {
-			.heh {
-				display: block;
+				height: 650px;
 			}
 		}
 	</style>
 </head>
 <body>
 	<header class="header">
-		<img class="heh" src="Karens homemade.png" alt="hi">
+		<img class="heh" src="Karens homemade.png" alt="Karen's Homemade Logo">
 		<h1>Welcome to Karen's Homemade Products!</h1>
 		<p>yeeeeeee</p>
 	</header>
+
 	<nav>
-		<a href="#about">About</a> |
-		<a href="#table">Table</a> |
-		<a href="#management">Management</a> |
-		<a href="#contact">Contact</a> 
+		<a href="#about">About</a>
+		<span>|</span>
+		<a href="#table">Table</a>
+		<span>|</span>
+		<a href="#management">Management</a>
+		<span>|</span>
+		<a href="#contact">Contact</a>
 	</nav>
+
 	<section id="about">
 		<h2>About the Company</h2>
-		<p>Karen's Homemade Products is a self-owned business run by entrepreneur, Karen S. Villarama-Zabala alongside her husband, Florence M. Zabala.
-		This company is a facet for the expression of the traditional Filipino cuisine.</p>
+		<p>Karen's Homemade Products is a self-owned business run by entrepreneur, Karen S. Villarama-Zabala alongside her husband, Florence M. Zabala. This company is a facet for the expression of the traditional Filipino cuisine.</p>
 	</section>
+
 	<section id="table">
 		<h2>Table Test</h2>
 		<table>
@@ -298,78 +353,71 @@
 			</thead>
 			<tbody>
 				<tr>
-					<th><img class="prd" src="prd3.jpg" alt="oops"></th>
-					<th><img class="prd" src="prd2.jpg" alt="oops"></th>
-					<th><img class="prd" src="prd1.jpg" alt="oops"></th>
+					<td><img class="prd" src="prd3.jpg" alt="Puto Product 3"></td>
+					<td><img class="prd" src="prd2.jpg" alt="Puto Product 2"></td>
+					<td><img class="prd" src="prd1.jpg" alt="Puto Product 1"></td>
 				</tr>
 				<tr>
-					<th>
-					📌 Puto: <br>
-					✔️Cheese/salted-egg<br>
-					BITE/SMALL SIZE:<br>
-					50pcs = 200php<br>
-					75pcs = 300php<br>
-					100pcs = 400php<br>
-					150pcs = 600php<br>
-					<br>
-					MEDIUM SIZE:<br>
-					✔️cheese or salted-egg:<br>
-					50pcs = 300php<br>
-					75pcs = 450php<br>
-					100pcs = 600php<br>
-					150pcs = 900php<br>
-					</th>
-					<th>
-					📌 Puto pao <br>
-					(pork asado filling with<br>
-					salted egg and<br>
-					cheese toppings):<br>
-					✔️12pcs = 180php<br>
-					✔️24pcs = 360php<br>
-					✔️50pcs = 720php<br>
-					</th>
-					<th>
-					📌 Puto flan:<br>
-					MEDIUM SIZE:<br>
-					✔️30pcs = 300php<br>
-					✔️40pcs = 400php<br>
-					✔️50pcs = 500php<br>
-					LARGE SIZE:<br>
-					✔️12pcs = 150php<br>
-					✔️24pcs = 300php<br>
-					✔️50pcs = 625php<br>
-					</th>
+					<td>
+						📌 <strong>Puto:</strong><br>
+						✔️ Cheese/salted-egg<br>
+						<strong>BITE/SMALL SIZE:</strong><br>
+						50pcs = 200php<br>
+						75pcs = 300php<br>
+						100pcs = 400php<br>
+						150pcs = 600php<br>
+						<br>
+						<strong>MEDIUM SIZE:</strong><br>
+						✔️ cheese or salted-egg:<br>
+						50pcs = 300php<br>
+						75pcs = 450php<br>
+						100pcs = 600php<br>
+						150pcs = 900php
+					</td>
+					<td>
+						📌 <strong>Puto pao</strong><br>
+						(pork asado filling with salted egg and cheese toppings):<br>
+						✔️ 12pcs = 180php<br>
+						✔️ 24pcs = 360php<br>
+						✔️ 50pcs = 720php
+					</td>
+					<td>
+						📌 <strong>Puto flan:</strong><br>
+						<strong>MEDIUM SIZE:</strong><br>
+						✔️ 30pcs = 300php<br>
+						✔️ 40pcs = 400php<br>
+						✔️ 50pcs = 500php<br>
+						<strong>LARGE SIZE:</strong><br>
+						✔️ 12pcs = 150php<br>
+						✔️ 24pcs = 300php<br>
+						✔️ 50pcs = 625php
+					</td>
 				</tr>
 			</tbody>
 		</table>
 	</section>
+
 	<section id="management">
 		<h2>Management</h2>
 		<ul>
-			<li><strong><a href="https://www.facebook.com/profile.php?id=61583350630772#" target="_blank"> Karen S. Villarama-Zabala,</a></strong> CEO</li>
-			<li><strong><a href="https://www.facebook.com/florence.zabala.ps5#" target="_blank">Florence M. Zabala,</a></strong> COO</li>
-			<li><strong><a href="https://www.facebook.com/karizza.villarama#" target="_blank"> Karizza S. Villarama,</a></strong> CFO</li>
-			<li><strong><a href="https://www.facebook.com/thvldkqnl143#" target="_blank"> Sophia Pearl Villarama,</a></strong> Director</li>
-			<li><strong><a href="https://www.facebook.com/BWAGAHAHAHA#" target="_blank"> Adriane V. Leosala,</a></strong> Director</li>
-			<li><strong><a href="https://www.facebook.com/yvan.zabala.9#" target="_blank"> Yvan V. Zabala,</a></strong> Director</li>
-			<li><strong><a href="638857501_25960027603665736_1052461800805666931_n.jpg" target="_blank"> Theodoreo V. Zabala,</a></strong> Ambassador</li>
+			<li><strong><a href="https://www.facebook.com/profile.php?id=61583350630772" target="_blank">Karen S. Villarama-Zabala</a></strong> - CEO</li>
+			<li><strong><a href="https://www.facebook.com/florence.zabala.ps5" target="_blank">Florence M. Zabala</a></strong> - COO</li>
+			<li><strong><a href="https://www.facebook.com/karizza.villarama" target="_blank">Karizza S. Villarama</a></strong> - CFO</li>
+			<li><strong><a href="https://www.facebook.com/thvldkqnl143" target="_blank">Sophia Pearl Villarama</a></strong> - Director</li>
+			<li><strong><a href="https://www.facebook.com/BWAGAHAHAHA" target="_blank">Adriane V. Leosala</a></strong> - Director</li>
+			<li><strong><a href="https://www.facebook.com/yvan.zabala.9" target="_blank">Yvan V. Zabala</a></strong> - Director</li>
+			<li><strong><a href="638857501_25960027603665736_1052461800805666931_n.jpg" target="_blank">Theodoreo V. Zabala</a></strong> - Ambassador</li>
 		</ul>
 	</section>
+
 	<section id="contact">
-	<div class="form">
 		<div class="contact-section">
 			<h2>Contact Us!</h2>
 			<p>Send us feedback or questions through the form below.</p>
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSembLUtvvn3sdOE4DzIF4b5FTj5xOtXgZ3WMWelRqbF86rcpw/viewform?embedded=true" 
-				width="640" 
-				height="650" 
-				frameborder="0" 
-				marginheight="0" 
-				marginwidth="0">
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSembLUtvvn3sdOE4DzIF4b5FTj5xOtXgZ3WMWelRqbF86rcpw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">
 				Loading…
-				</iframe>
+			</iframe>
 		</div>
-	</div>
 	</section>
 
 </body>

@@ -4,6 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karen's Homemade</title>
 	<style>
+		* {
+  			box-sizing: border-box;
+		}
 		body {
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			line-height: 1.6;
@@ -12,6 +15,7 @@
 			background-color: #ffd4fe;
 			color: #444;
 		}
+		@media (max-width: 768px) {
 		.header {
 			background-color: #af4ca7;
 			color: white;
@@ -19,6 +23,13 @@
 			text-align: center;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			position: relative;
+			flex-direction: column;
+			text-align: center;
+			}
+  		.heh, .me {
+    		position: static;
+    		margin: 10px auto;
+  			}
 		}
 		.me {
 			width: 150px;
@@ -31,15 +42,15 @@
 			left: 75px;
 		}
 		.prd {
-			width: 150px;
-			height: 150px;
+			max-width: 100%;
+			height: auto;
 			border-radius: 10px;
 			display: block;
 			margin-left: 75px;
 		}
 		.heh {
-			width: 150px;
-			height: 150px;
+			max-width: 100%;
+			height: auto;
 			border-radius: 10px;
 			display: block;
 			margin-left: 100px;
@@ -57,6 +68,10 @@
 			padding: 12px 0;
 			position: sticky;
 			top: 0;
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			flex-wrap: wrap;
 		}
 		nav a {
 			color: #ffffff;
@@ -67,7 +82,7 @@
 			letter-spacing: 0.5px;
 		}
 		nav a:hover {
-			color: #9c799a
+			color: #9c799a;
 			text-decoration: underline;
 		}
 		section {
@@ -92,6 +107,9 @@
 			width: 100%;
 			border-collapse: separate;
 			margin-top: 15px;
+			display: block;
+			overflow-x: auto;
+			white-space: no-wrap;
 		}
 		table th, 
 		table td {

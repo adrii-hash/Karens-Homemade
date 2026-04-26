@@ -1,4 +1,6 @@
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karen's Homemade</title>
 	<style>
 		body {
@@ -130,6 +132,140 @@
 			border-radius: 8px;
 			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 			transition: box-shadow 0.3s ease;
+		}
+
+		/* ===== MOBILE RESPONSIVE STYLES (Small Phones: 0px - 480px) ===== */
+		@media (max-width: 480px) {
+			header h1 {
+				font-size: 1.8rem;
+			}
+
+			.me, .heh {
+				width: 100px;
+				height: 100px;
+				position: static;
+				display: none;
+				margin-left: 0;
+			}
+
+			nav {
+				padding: 8px 0;
+			}
+
+			nav a {
+				display: block;
+				margin: 8px 0;
+				font-size: 0.9rem;
+			}
+
+			section {
+				padding: 15px;
+				margin: 10px auto;
+				max-width: 100%;
+			}
+
+			section h2 {
+				font-size: 1.3rem;
+			}
+
+			table th, 
+			table td {
+				padding: 8px;
+				font-size: 0.85rem;
+			}
+
+			.prd {
+				width: 100px;
+				height: 100px;
+				margin-left: 0;
+			}
+
+			ul li {
+				font-size: 1rem;
+			}
+
+			.contact-section {
+				padding: 20px;
+			}
+
+			iframe {
+				height: 500px;
+			}
+
+			form {
+				padding: 15px;
+				max-width: 100%;
+			}
+		}
+
+		/* ===== TABLET RESPONSIVE STYLES (481px - 1024px) ===== */
+		@media (min-width: 481px) and (max-width: 1024px) {
+			header h1 {
+				font-size: 2rem;
+			}
+
+			.me, .heh {
+				width: 120px;
+				height: 120px;
+				position: static;
+				display: none;
+				margin-left: 0;
+			}
+
+			nav {
+				padding: 10px 0;
+			}
+
+			nav a {
+				margin: 0 10px;
+				font-size: 1rem;
+			}
+
+			section {
+				padding: 20px;
+				margin: 15px auto;
+				max-width: 95%;
+			}
+
+			section h2 {
+				font-size: 1.4rem;
+			}
+
+			table th, 
+			table td {
+				padding: 10px;
+				font-size: 0.95rem;
+			}
+
+			.prd {
+				width: 120px;
+				height: 120px;
+				margin-left: 0;
+			}
+
+			ul li {
+				font-size: 1.1rem;
+			}
+
+			.contact-section {
+				padding: 30px;
+			}
+
+			iframe {
+				height: 600px;
+			}
+
+			form {
+				padding: 20px;
+				max-width: 95%;
+			}
+		}
+
+		/* ===== DESKTOP RESPONSIVE STYLES (1025px and above) ===== */
+		@media (min-width: 1025px) {
+			.heh {
+				display: block;
+			}
 		}
 	</style>
 </head>
